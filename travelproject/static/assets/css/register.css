@@ -1,0 +1,86 @@
+.button{
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 1;
+    border-radius: 500px;
+    transition-property: background-color,border-color,color,box-shadow,filter;
+    transition-duration: .3s;
+    border: 1px solid transparent;
+    letter-spacing: 2px;
+    min-width: 160px;
+    text-transform: uppercase;
+    white-space: normal;
+    font-weight: 700;
+    text-align: center;
+    padding: 17px 48px;
+    color: #fff;
+    background-color: #1ED760;
+    height: 48px;
+}
+.button:hover{
+    transform: scale(1.04);
+    background-color: #21e065;
+}
+body{
+    text-align:center;
+}
+    label{
+    font-size:18px;
+    font:fa-solid-900.ttf;
+    color:#ffffff;
+    text-align:left;
+    padding:5px 20px;
+}
+label1{
+    font-size:16px;
+    color:#ffffff;
+    text-align:left;
+    padding:5px 20px;
+}
+.radiobut{
+    color:#ffffff;
+}
+
+
+input[type=email],input[type=text], input[type=password] {
+
+    padding: 15px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    font-family: Ubuntu;
+    font-size: 18px;
+    outline: none;
+    border-radius: 25px;
+    border: 1px solid #64ffda;
+}
+input[type=text]:focus, input[type=password]:focus {
+    border: 1px solid #212121;
+}
+
+.container{
+  max-width: 1200px;
+  width: 100%;
+  background-color:transparent;
+  padding: 25px 30px;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+  position: relative;
+  left:50px;
+}
+.content-loader {
+  overflow: scroll;
+}
+
+.content-loader table {
+  width: auto;
+  background: #aaa;
+}
+.message{
+    text-decoration: none;
+    font-family: Montserrat;
+    font-weight: bolder;
+    color:red;
+    font-size:20px;
+}

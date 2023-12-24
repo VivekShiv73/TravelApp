@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>LogIn | Divine Destination</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'assets/css/login.css' %}">
+    <link rel="icon" href="{% static 'assets/images/logo.png' %}" type="image">
+    <link rel="stylesheet" href="{% static 'assets/css/fontawesome.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+
+</head>
+
+<body background="{% static 'assets/images/banner-04.jpg' %}">
+    <center>
+        <div id="login" style="padding:30px">
+            <h2 style="font-family: fa-brands-400;color:white; font-size:40px">Log In</h2><br>
+            <form action="login" method="post" style="padding:50px">
+                {% csrf_token %}
+
+                <p style="font-family: fa-brands-400;color:white;font-size:20px">Username</p>
+
+                <div class="input">
+                <input type="text" name="username" placeholder="Enter your Username"><br>
+                </div>
+
+                <p style="font-family: fa-brands-400;color:white;font-size:20px">Password</p>
+
+                <div class="input">
+                <input type="password" name="password" placeholder="Enter your password"><br><br><br>
+                </div>
+                <div>
+                <button class="button">Login</button>
+                </div>
+            </form>
+            <div class="message">
+                {% for msg in messages %}
+                {{msg}}
+                {% endfor %}
+            </div>
+        </div>
+
+
+
+    <script>
+        function validate() {
+            email = document.getElementById('email').value;
+            password = document.getElementById('password').value;
+            validEmail = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+
+            if (email == '') {
+                alert('Please enter your email.');
+                return false;
+            } else if (validEmail.test(email) == false) {
+                alert('Please enter your email correctly');
+                return false;
+            } else if (password == '') {
+                alert('Please enter password.');
+                return false;
+            } else
+                return true;
+        }
+    </script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</body>
+</html>
